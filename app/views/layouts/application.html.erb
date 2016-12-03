@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bechirsegni</title>
-    <%= csrf_meta_tags %>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+    <title>Bechir Segni</title>
+    <meta name="description" content="#TODO" />
+
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="home-template ">
+  <main class="pagewrapper">
+
+    <%= render 'layouts/common/header'%>
     <%= yield %>
+    <%= render 'layouts/common/footer'%>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </main>
   </body>
 </html>
